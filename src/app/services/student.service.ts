@@ -32,4 +32,4 @@ export class StudentService {
   changeStatus(position: number): void{
     this.students[position].active = !this.students[position].active;
   }
-}
+} 

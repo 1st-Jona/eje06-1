@@ -11,8 +11,10 @@ export class Tab1Page {
 
   students: Student[] = new Array();
 
-  constructor(private StudentService: StudentService) {
-    this.students = this.StudentService.getStudents();
+  constructor(private studentService: StudentService) {
+    this.students = this.studentService.getStudents();
   }
-
+  changeStatus(position: number){
+    this.studentService.changeStatus(position);
+  }
 }
