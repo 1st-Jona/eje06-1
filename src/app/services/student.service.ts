@@ -9,7 +9,7 @@ export class StudentService {
 
   private students: Student[] = new Array();
 
-  constructor() { 
+  constructor() {
     this.students.push({
       name: 'Jonathan López Sánchez',
       controlNumber: '16400948',
@@ -32,4 +32,11 @@ export class StudentService {
   changeStatus(position: number): void{
     this.students[position].active = !this.students[position].active;
   }
-} 
+
+  deleteStudent(position: number): void{
+    this.students.splice(position, 1);
+  }
+  newStudent(student:Student): void{
+    this.students.push(student);
+  }
+}
