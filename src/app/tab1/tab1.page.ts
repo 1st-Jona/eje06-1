@@ -57,6 +57,6 @@ export class Tab1Page {
   }
 
   newStudent(){
-
+    this.router.navigate(['/new-student']);
   }
 }
